@@ -11,7 +11,7 @@ import "./App.css";
 function App() {
   return (
     <MovieProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/Movie-Watchlist-Application">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
