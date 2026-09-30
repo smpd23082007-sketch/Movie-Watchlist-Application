@@ -1,20 +1,19 @@
-<script>
-  (function () {
-    const redirect = sessionStorage.getItem("redirect");
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-    if (redirect) {
-      sessionStorage.removeItem("redirect");
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-      const data = JSON.parse(redirect);
+    <title>Movie Watchlist Application</title>
+  </head>
 
-      window.history.replaceState(
-        null,
-        null,
-        "/Movie-Watchlist-Application/" +
-          data.route +
-          data.search +
-          data.hash
-      );
-    }
-  })();
-</script>
+  <body>
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
